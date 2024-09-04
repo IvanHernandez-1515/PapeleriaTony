@@ -1,0 +1,14 @@
+<div *ngIf="!actualizar; else templateElse">
+
+  <div class="container pd-3 flex-row d-flex flex-wrap  align-content-start">
+    <app-proveedor *ngFor ="let p of listaProv"
+          [prov]="p"
+  (provSeleccionado)="recibirProveedor($event)"
+          >
+    </app-proveedor>
+</div>
+
+</div>
+<ng-template #templateElse>
+    <app-actualizar-pro [provee]="miProv"></app-actualizar-pro>
+</ng-template>

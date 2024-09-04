@@ -1,0 +1,29 @@
+<h2>Agregar nuevo Proveedor</h2>
+<div>
+  RFC: <input type="text" [(ngModel)]="miProv.rfc" />
+</div>
+<div>
+Estatus:<input type="text" [(ngModel)]="miProv.estatus" />
+</div>
+<div>
+Nombre de la Empresa: <input type="text"  [(ngModel)]="miProv.nomEmpresa" />
+</div>
+<div>
+Pagina Web: <input type="text"  [(ngModel)]="miProv.paginaWEB"/>
+</div>
+<div>
+Representante: <input type="text"  [(ngModel)]="miProv.representante"/>
+</div>
+<div>
+Telefono: <input type="text"  [(ngModel)]="miProv.telProveedor"/>
+</div>
+<div>
+Fecha de registro: <input type="date" [(ngModel)]="miProv.fecha_registro"/>
+</div>
+<div>
+Usuario Id: <input type="number" [(ngModel)]="miProv.usuarioid" />
+</div>
+<button type="button" (click)="enviarProv()">Agregar</button>
+
+
+

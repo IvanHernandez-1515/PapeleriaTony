@@ -1,0 +1,13 @@
+<h2>Agregar una marca</h2>
+<div>
+  Marca: <input type="text" [(ngModel)]="miMarca.marca"/>
+</div>
+<div>
+Logotipo:<input type="file" accept="image/*" (change)="convertir_a_B64($event)" />
+</div>
+<div>
+Numero<input type="number"  [(ngModel)]="miMarca.numero" />
+</div>
+<button type="button" (click)="enviarMarca()">Agregar</button>
+
+

@@ -1,0 +1,12 @@
+<div *ngIf="!actualizar; else templateElse">
+  <div class="container pd-3 flex-row d-flex flex-wrap  align-content-start">
+    <app-marcas *ngFor ="let m of listaMarca"
+          [miMarca]="m"
+          (marcaSeleccionado)="recibirMarcas($event)"
+          >
+    </app-marcas>
+  </div>
+</div>
+<ng-template #templateElse>
+<app-actualizar-mar [mar]="miMarca"></app-actualizar-mar>
+</ng-template>

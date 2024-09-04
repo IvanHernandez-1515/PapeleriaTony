@@ -1,0 +1,94 @@
+<div class="container">
+  <h2>Agregar nuevo producto</h2>
+  <form id="actualizar">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">ID:</label>
+        <input disabled="disabled" type="text" class="form-control" name="id" [(ngModel)]="product._id.$oid"/>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Clave:</label>
+        <input type="text" class="form-control" name="clave" [(ngModel)]="product.clave"/>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Nombre del Producto:</label>
+        <input type="producto" class="form-control" name="name_control" [(ngModel)]="product.nombre" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Foto:</label>
+        <input type="file" class="form-control" name="foto" accept="image/*" (change)="convertir_a_B64($event)">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Costo:</label>
+        <input type="number" class="form-control" name="costo" [(ngModel)]="product.costo" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Color:</label>
+        <input type="text" class="form-control" name="color" [(ngModel)]="product.color"/>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Descripcion:</label>
+        <input type="text" class="form-control" name="descripcion" [(ngModel)]="product.descripcion"/>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Fecha:</label>
+        <input type="date" class="form-control" name="fecha_ad" [(ngModel)]="product.fecha_ad"/>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Origen:</label>
+        <input type="text" class="form-control" name="origen"[(ngModel)]="product.origen"/>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Status:</label>
+        <input type="text" class="form-control" name="status"[(ngModel)]="product.status" />
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Categoria nombre:</label>
+        <input type="text" class="form-control" name="categoria" [(ngModel)]="product.categoria.nombre"/>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Categoria descripcion:</label>
+        <input type="text" class="form-control" name="categoria.descripcion" [(ngModel)]="product.categoria.descripcion">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Modelo nombre:</label>
+        <input type="text" class="form-control" name="textoModelo" [(ngModel)]="product.modelo.nombre"/>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Modelo descripcion:</label>
+        <input type="text" class="form-control" name="textoModelo" [(ngModel)]="product.modelo.descripcion">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">Medida:</label>
+        <input type="text" class="form-control" name="TextoMedida" [(ngModel)]="product.medida" />
+      </div>
+    </div>
+
+    <div class="btn-group mb-3">
+      <button type="button" class="me-2 btn btn-outline-primary"
+        (click)="actualizarProd()">Actualizar</button>
+      <!-- <button type="button" class="btn btn-outline-danger" (click)="cancelar()">Cancelar</button> -->
+    </div>
+  </form>
+</div>

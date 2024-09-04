@@ -1,0 +1,68 @@
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+  </style>
+</head>
+
+<div class="content">
+    <h2>Catalogo de productos</h2>
+    <table class="table table-bordered table-striped">
+      <thead class="bg-primary text-white">
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Costo</th>
+          <th>Medida</th>
+          <th>Fecha</th>
+          <th>Color</th>
+          <th>Foto</th>
+          <th>Status</th>
+          <th>Cat. Nombre</th>
+          <th>Cat. Descripcion</th>
+          <th>Mod. Nombre</th>
+          <th>Mod. Descripcion</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let prod of listaProds">
+          <td >{{prod._id.$oid}}</td>
+          <!-- <td >{{prod.clave}}</td> -->
+          <td >{{prod.nombre}}</td>
+          <td >{{prod.descripcion}}</td>
+          <td >${{prod.precio}}</td>
+          <td >${{prod.costo}}</td>
+          <td >{{prod.medida}}</td>
+          <td >{{prod.fecha_ad.$date}}</td>
+          <td >{{prod.color}}</td>
+          <td >
+            <img src="{{prod.foto}}" width="70" height="70">
+          </td>
+          <td >{{prod.status}}</td>
+          <td >{{prod.categoria.nombre}}</td>
+          <td >{{prod.categoria.descripcion}}</td>
+          <td >{{prod.modelo.nombre}}</td>
+          <td >{{prod.modelo.descripcion}}</td>
+          <td>
+            <a [routerLink]="['/productoseliminar', prod._id.$oid]" class="btn btn-danger">
+              Eliminar
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

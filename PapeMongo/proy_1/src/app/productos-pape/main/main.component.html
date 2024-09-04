@@ -1,0 +1,13 @@
+<div *ngIf = "!actualizar; else templateElse">
+  <div class="container pd-3 flex-row d-flex flex-wrap  align-content-start">
+    <app-producto *ngFor="let p of  listaProds" [miProd]="p" (prodSeleccionado)="recibirProducto($event)">
+    </app-producto>
+</div>
+
+</div>
+<ng-template #templateElse>
+    <div>
+      <app-actualizar [product]="miProd"></app-actualizar>
+    </div>
+</ng-template>
+

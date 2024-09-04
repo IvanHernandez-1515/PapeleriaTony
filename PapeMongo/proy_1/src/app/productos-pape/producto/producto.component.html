@@ -1,0 +1,12 @@
+<div class="card mb-3" style="max-width: 16rem;">
+  <img src={{miProd.foto}} class="card-img-top" alt="Producto {{miProd.nombre}}">
+  <div class="card-body">
+    <h5 class="card-title">{{miProd.nombre}}</h5>
+    <p class="card-text">Costo: ${{miProd.costo}}</p>
+    <p class="card-text">Precio: ${{miProd.costo}}</p>
+    <button (click)="enviarProd_seleccionado(miProd)" class="btn btn-primary">
+      <span class="fas fa-edit me-2" style="font-size:20px" aria-hidden="true">Actualizar</span>
+    </button>
+  </div>
+</div>
+

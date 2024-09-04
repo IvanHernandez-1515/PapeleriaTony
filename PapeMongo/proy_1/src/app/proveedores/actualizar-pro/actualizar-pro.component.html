@@ -1,0 +1,33 @@
+<h2>Agregar nuevo Proveedor</h2>
+<div>
+  ID: <input type="text" [(ngModel)]="provee._id.$oid" />
+</div>
+<div>
+  RFC: <input type="text" [(ngModel)]="provee.rfc" />
+</div>
+<div>
+Estatus:<input type="text" [(ngModel)]="provee.estatus" />
+</div>
+<div>
+Nombre de la Empresa: <input type="text"  [(ngModel)]="provee.nomEmpresa" />
+</div>
+<div>
+Pagina Web: <input type="text"  [(ngModel)]="provee.paginaWEB"/>
+</div>
+<div>
+Representante: <input type="text"  [(ngModel)]="provee.representante"/>
+</div>
+<div>
+Telefono: <input type="text"  [(ngModel)]="provee.telProveedor"/>
+</div>
+<div>
+Fecha de registro: <input type="date" [(ngModel)]="provee.fecha_registro"/>
+</div>
+<div>
+Usuario Id: <input type="number" [(ngModel)]="provee.usuarioid" />
+</div>
+<button type="button" class="me-2 btn btn-outline-primary"
+(click)="actualizarProv()">Actualizar</button>
+
+
+

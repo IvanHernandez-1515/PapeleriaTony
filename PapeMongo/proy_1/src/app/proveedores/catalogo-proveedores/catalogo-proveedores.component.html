@@ -1,0 +1,55 @@
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      text-align: center;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #D6EEEE;
+    }
+  </style>
+  </head>
+
+  <h2>Catalogo de Proveedores</h2>
+  <table class="table table-bordered table-striped">
+    <thead class="bg-primary text-white">
+      <tr>
+        <th>ID</th>
+        <th>RFC</th>
+        <th>Estatus</th>
+        <th>Nombre de la empresa</th>
+        <th>Pagina WEB</th>
+        <th>Representante</th>
+        <th>Telefono del proveedor</th>
+        <th>Usuario ID</th>
+        <th>Fecha de registro</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <tr  *ngFor="let prov of Provedoreslista">
+        <td >{{prov._id.$oid}}</td>
+        <td >{{prov.rfc}}</td>
+        <td >{{prov.estatus}}</td>
+        <td >{{prov.nomEmpresa}}</td>
+        <td >{{prov.paginaWEB}}</td>
+        <td >{{prov.representante}}</td>
+        <td >{{prov.telProveedor}}</td>
+        <td >{{prov.usuarioid}}</td>
+        <td >{{prov.fecha_registro.$date}}</td>
+        <td>
+          <a [routerLink]="['/proveedorEliminar', prov._id.$oid]" class="btn btn-danger">
+            Eliminar
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
